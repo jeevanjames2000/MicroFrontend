@@ -9,7 +9,7 @@ const printCompilationMessage = require("./compilation.config.js");
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:5000/",
+    publicPath: "https://microfrontend-b3x7.onrender.com",
   },
 
   resolve: {
@@ -19,6 +19,8 @@ module.exports = (_, argv) => ({
   devServer: {
     port: 5000,
     historyApiFallback: true,
+    allowedHosts: ["auto", ".onrender.com", "https", "http", "all"],
+    bonjour: true,
     watchFiles: [path.resolve(__dirname, "src")],
     onListening: function (devServer) {
       const port = devServer.server.address().port;
