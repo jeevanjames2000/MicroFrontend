@@ -67,7 +67,7 @@ module.exports = (_, argv) => ({
       name: "head",
       filename: "remoteEntry.js",
       remotes: {
-        host: "host@http://localhost:5000/remoteEntry.js",
+        host: "host@https://microfrontend-b3x7.onrender.com/remoteEntry.js",
       },
       exposes: {
         "./Header": "./src/Header.jsx",
