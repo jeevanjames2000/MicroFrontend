@@ -9,7 +9,7 @@ const printCompilationMessage = require("./compilation.config.js");
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:5003/",
+    publicPath: "https://microfrontend-f5gd.onrender.com/",
   },
 
   resolve: {
