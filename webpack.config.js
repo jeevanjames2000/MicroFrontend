@@ -37,6 +37,10 @@ module.exports = (_, argv) => ({
         });
       });
     },
+    hot: true, // Enable hot module replacement
+    static: {
+      directory: path.join(__dirname, "dist"), // Serve built files
+    },
   },
 
   module: {
