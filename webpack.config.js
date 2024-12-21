@@ -19,7 +19,7 @@ module.exports = (_, argv) => ({
   devServer: {
     port: 5001,
     historyApiFallback: true,
-    allowedHosts: ["auto", "onrender.com", "https", "http", "all"],
+    allowedHosts: ["auto", ".onrender.com", "https", "http", "all"],
     bonjour: true,
     watchFiles: [path.resolve(__dirname, "src")],
     onListening: function (devServer) {
