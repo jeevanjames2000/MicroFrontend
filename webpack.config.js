@@ -65,7 +65,7 @@ module.exports = (_, argv) => ({
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        head: "head@http://localhost:5001/remoteEntry.js",
+        head: "https://microfrontend-f5gd.onrender.com/",
         // solid: "crossplatform@http://localhost:5002/remoteEntry.js",
         body: "body@http://localhost:5003/remoteEntry.js",
       },
