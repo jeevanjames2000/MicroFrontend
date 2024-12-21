@@ -22,6 +22,10 @@ module.exports = (_, argv) => ({
     allowedHosts: ["auto", ".onrender.com", "https", "http", "all"],
     bonjour: true,
     watchFiles: [path.resolve(__dirname, "src")],
+    hot: true, // Enable hot module replacement
+    static: {
+      directory: path.join(__dirname, "dist"), // Serve built files
+    },
     onListening: function (devServer) {
       const port = devServer.server.address().port;
 
