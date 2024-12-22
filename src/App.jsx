@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "head/Header";
-// import Solid from "solid/Solid";
-import Body from "body/Body";
+// import Header from "head/Header";
+// // import Solid from "solid/Solid";
+// import Body from "body/Body";
 
 import "./index.css";
 import Footer from "./Footer";
@@ -16,8 +16,8 @@ const App = () => (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
-        <Body />
+        {/* <Header />
+        <Body /> */}
         {/* <Solid /> */}
         <Footer />
       </ThemeProvider>
