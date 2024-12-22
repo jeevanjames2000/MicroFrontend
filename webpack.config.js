@@ -9,7 +9,10 @@ const printCompilationMessage = require("./compilation.config.js");
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "https://microfrontend-f5gd.onrender.com/",
+    publicPath:
+      argv.mode === "development"
+        ? "http://localhost:8081"
+        : "https://microfrontend-f5gd.onrender.com/",
   },
 
   resolve: {
@@ -71,7 +74,7 @@ module.exports = (_, argv) => ({
       name: "head",
       filename: "remoteEntry.js",
       remotes: {
-        host: "host@https://microfrontend-b3x7.onrender.com/remoteEntry.js",
+        // host: "host@https://microfrontend-b3x7.onrender.com/remoteEntry.js",
       },
       exposes: {
         "./Header": "./src/Header.jsx",
