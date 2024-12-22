@@ -9,7 +9,7 @@ const printCompilationMessage = require("./compilation.config.js");
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "https://microfrontend-b3x7.onrender.com",
+    publicPath: "http://localhost:5000/",
   },
 
   resolve: {
@@ -19,8 +19,6 @@ module.exports = (_, argv) => ({
   devServer: {
     port: 5000,
     historyApiFallback: true,
-    allowedHosts: ["auto", ".onrender.com", "https", "http", "all"],
-    bonjour: true,
     watchFiles: [path.resolve(__dirname, "src")],
     onListening: function (devServer) {
       const port = devServer.server.address().port;
@@ -67,9 +65,9 @@ module.exports = (_, argv) => ({
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        head: "head@https://microfrontend-f5gd.onrender.com/remoteEntry.js",
+        head: "head@http://localhost:5001/remoteEntry.js",
         // solid: "crossplatform@http://localhost:5002/remoteEntry.js",
-        body: "body@https://microfrontend-1.onrender.com/remoteEntry.js",
+        body: "body@http://localhost:5003/remoteEntry.js",
       },
       exposes: {
         "./theme": "./src/theme.jsx",
