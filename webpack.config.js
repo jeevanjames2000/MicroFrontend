@@ -65,9 +65,9 @@ module.exports = (_, argv) => ({
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        head: "head@http://localhost:5001/remoteEntry.js",
+        // head: "head@http://localhost:5001/remoteEntry.js",
         // solid: "crossplatform@http://localhost:5002/remoteEntry.js",
-        body: "body@http://localhost:5003/remoteEntry.js",
+        // body: "body@http://localhost:5003/remoteEntry.js",
       },
       exposes: {
         "./theme": "./src/theme.jsx",
