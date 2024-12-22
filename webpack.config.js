@@ -11,7 +11,7 @@ module.exports = (_, argv) => ({
   output: {
     publicPath:
       argv.mode === "development"
-        ? "http://localhost:8081"
+        ? "http://localhost:5001"
         : "https://microfrontend-f5gd.onrender.com/",
   },
 
